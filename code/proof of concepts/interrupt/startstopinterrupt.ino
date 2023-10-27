@@ -4,7 +4,7 @@ bool Running;
 
 void setup() {
   analogReference(DEFAULT);
-  pinMode(Button, INPUT_PULLUP);
+  pinMode(Button, INPUT);
   pinMode(ledPin, OUTPUT);
   attachInterrupt(digitalPinToInterrupt(Button), Interrupt, RISING);
 }
