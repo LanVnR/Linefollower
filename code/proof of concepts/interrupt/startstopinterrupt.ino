@@ -1,24 +1,23 @@
-const int Button = 2;
-const int ledPin = 12;
-bool Running;
+int led = 3;
+int interruptPin = 2;
+bool state = LOW;
 
-void setup() {
-  analogReference(DEFAULT);
-  pinMode(Button, INPUT);
-  pinMode(ledPin, OUTPUT);
-  attachInterrupt(digitalPinToInterrupt(Button), Interrupt, RISING);
+void setup(){
+  pinMode(interruptPin, INPUT);
+  pinMode(led, OUTPUT);
+  attachInterrupt(digitalPinToInterrupt(interruptPin), interrupt, RISING);
 }
 
-void loop() {
-  if (Running == true) {
-    digitalWrite(ledPin, HIGH);
-   
-  }
-  else {
-    digitalWrite(ledPin, LOW);
-  }
+
+void loop(){
+  digitalWrite(led, state);
 }
 
-void Interrupt() {
-  Running = ! Running;
+void interrupt(){
+  static unsigned long vorigeInterrupt = 0;
+  unsigned long interruptTijd = millis();
+  if (interruptTijd - vorigeInterrupt > 100){
+    state =! state;
+  }
+  vorigeInterrupt = interruptTijd;
 }
