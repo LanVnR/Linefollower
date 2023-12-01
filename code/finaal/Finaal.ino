@@ -18,12 +18,16 @@ unsigned long calculationTime;
 const int sensor[] = {A0, A1, A2, A3, A4, A5 };
 int ledPowerOn = 3;
 int buttonStartStop = 2;
+float iTerm;
+float lastErr;
 
 
 
 struct param_t{
   unsigned long cycleTime;
   float Kp;
+  float ki;
+  float kd;
   float diff;
   int power; 
   int black[6];
@@ -108,6 +112,13 @@ void loop()
     float error  = -params.position;
     float output = error * params.Kp;
 
+    iTerm += params.ki * error;
+    iTerm = constrain(iTerm, -510, 510);
+    output += iTerm;
+
+    output += params.kd * (error - lastErr);
+    lastErr = error;
+
     output = constrain(output, -510, 510);
 
     int powerLeft = 0;
@@ -147,7 +158,23 @@ void onSet(){
 
   char* param1 = sCmd1.next(); //DRAADLOOS
   char* value1 = sCmd1.next();
-  if (strcmp(param1, "cycle") == 0) params.cycleTime = atol(value1);
+  if (strcmp(param1, "cycle") == 0){
+    long newCycleTime = atol(value1);
+    float ratio = ((float) newCycleTime) / ((float) params.cycleTime);
+
+    params.ki *= ratio;
+
+    params.cycleTime = newCycleTime;
+  }
+  else if (strcmp(param1, "ki") == 0){
+    float cycleTimeInSec = ((float) params.cycleTime) / 1000000;
+    params.ki = atof(value1) * cycleTimeInSec;
+  }
+  else if (strcmp(param1, "kd") == 0){
+    float cycleTimeInSec = ((float) params.cycleTime) / 1000000;
+    params.kd = atof(value1) / cycleTimeInSec;
+  }
+  
   if (strcmp(param1, "power") == 0) params.power = atoi(value1);
   if (strcmp(param1, "diff") == 0) params.diff = atof(value1);
   if (strcmp(param1, "kp") == 0) params.Kp = atof(value1);
@@ -180,6 +207,15 @@ void onDebug(){
 
   SerialGate.print("Kp: ");
   SerialGate.println(params.Kp);
+
+  float cycleTimeInSec = ((float) params.cycleTime) / 1000000;
+  float ki = params.ki / cycleTimeInSec;
+  SerialGate.print("Ki: ");
+  SerialGate.println(ki);
+
+  float kd = params.kd * cycleTimeInSec;
+  SerialGate.print("Kd: ");
+  SerialGate.println(kd);
 
   SerialGate.print("Diff: ");
   SerialGate.println(params.diff);
