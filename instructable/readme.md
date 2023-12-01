@@ -21,10 +21,15 @@ Nu je de basis van je auto hebt en elk component een plaats heeft, kan je doorga
 Het uploaden van de volledige code.
 
 #a. Verbind je Arduino met je pc via een kabel.
-#b. Compileer de code en controleer op sintaxfouten
+
+#b. Compileer de code en controleer op sintaxfouten.
+
 #c. Upload je code via het Arduino IDE-programma.
+
 #d. Koppel de kabel los.
+
 #e. Test de auto via de bluetooth-communicatie.
+
 
 
 ### stap 5 
