@@ -1,4 +1,4 @@
-## bill of materials
+## Bill Of Materials
 |volgnummer|naam|omschrijving|nieuw/recup|kostprijs/stuk|aantal|subtotaal|
 |----------|----|------------|-----------|---------|------|---------|
 |         1| Batterij | 18650 lithium-ion oplaadbare  | nieuw |    3,39       |   2x   |    6,78     |
