@@ -32,7 +32,7 @@ Het uploaden van de volledige code.
 
 ### stap 4b
 
-Download de mobiele app "Serial Bluetooth Terminal" uit de Google Play Store. Maak een bluetooth verbinden met de HC-05 modelu. Configureer de beschikbare knoppen om snel commando's door te sturen naar je wagentje. Handig zijn de commando's: "SET", "DEBUG" en "CALIBRATE" hiermee kan je de auto draadloos instellen en waarden uitlezen.
+Download de mobiele app "Serial Bluetooth Terminal" uit de Google Play Store. Maak een bluetooth verbinden met de HC-05 module. Configureer de beschikbare knoppen om snel commando's door te sturen naar je wagentje. Handig zijn de commando's: "SET", "DEBUG" en "CALIBRATE". Hiermee kan je de auto draadloos instellen en waarden uitlezen.
 
 ### stap 5 
 
