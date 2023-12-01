@@ -16,7 +16,7 @@ Bouw de auto op, beginnend met het creëren van de basis. Houd rekening met de v
 
 Nu je de basis van je auto hebt en elk component een plaats heeft, kan je doorgaan met het monteren en aansluiten van de verschillende onderdelen op de auto. Denk aan de H-brug, de HC-05 module, de sensor en je microcontroller. Test ook hier elk component opnieuw na bevestiging met behulp van de Proof of Concepts om te verifiëren of alles correct werkt. Ga pas naar stap 4 als alles gemonteerd is. Probeer meerdere PoC te combineren om zo je programma telkens meer en meer uit te breiden.
 
-### stap 4
+### stap 4a
 
 Het uploaden van de volledige code.
 
@@ -30,7 +30,9 @@ Het uploaden van de volledige code.
 
 #e. Test de auto via de bluetooth-communicatie.
 
+### stap 4b
 
+Download de mobiele app "Serial Bluetooth Terminal" uit de Google Play Store. Maak een bluetooth verbinden met de HC-05 modelu. Configureer de beschikbare knoppen om snel commando's door te sturen naar je wagentje. Handig zijn de commando's: "SET", "DEBUG" en "CALIBRATE" hiermee kan je de auto draadloos instellen en waarden uitlezen.
 
 ### stap 5 
 
