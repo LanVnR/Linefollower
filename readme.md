@@ -7,21 +7,21 @@ PLAN B:
  
 ## specifications
 
-microcontroller:
+microcontroller: Arduino Leonardo with ATmega32U4
 
-motors: 
+motors: mini DC N20 6V 500rpm micro transmissiemotor
 
-h-bridge:
+h-bridge: DRV8833 dual motor driver
 
-sensors:
+sensors: QTR-8A infraded detection sensor
 
-batteries:
+batteries: 18650 lithium-ion
 
-wireless communication:
+wireless communication: HC-05 Bluetooth module
 
-distance sensor - motors:
+distance sensor - motors: 
 
 weight:
 
-speed: 
+speed: 0.552 m/s
 
