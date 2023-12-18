@@ -11,5 +11,5 @@
 |         8| Wielen | Wiel - 3mm D-as - 43mm  | nieuw |   1,85       |   2x   |    3,7    |
 |         9| Breadbord | arduino leonardo kit   | nieuw |    /       |   1x   |    /     |
 |         10| JumperWires | arduino leonardo kit   | nieuw |    /       |   16x   |    /     |
-|        11| Batterij houder | arduino leonardo kit   | nieuw |    /       |   1x   |    /     |
-|        12| Kogelwiel | Voorwiel wagen  | nieuw |    1,62       |   1x   |    1,62     |
+|        11|  Kogelwiel | Voorwiel wagen  | nieuw |    1,62       |   1x   |    1,62     |
+
