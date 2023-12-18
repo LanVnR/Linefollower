@@ -1,10 +1,10 @@
 # LineFollower
+Lander Van Ryckegem
+PLAN B:
 
-lege repository die je als template kan gebruiken om een eigen repository te starten voor uw linefollower project
+![JEs6bQbRyTqcsnCwUncCo 1020 IRZXSOY](https://github.com/LanVnR/Linefollower/assets/146451866/f6bf3b31-2213-4a71-95f5-c29d18aa2089)
 
-![A description of my image](images/empty.png)
-
-  
+ 
 ## specifications
 
 microcontroller:
